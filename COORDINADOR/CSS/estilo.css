@@ -1,0 +1,24 @@
+     /*********************************CONFIGURACION************************************/
+
+	.titulo_info_config{
+
+    text-align: left;
+    margin-top: 40px;
+	}
+
+
+    .content_info_config{
+
+    padding-left: 30px;
+    text-align: left;
+     }
+
+
+    #registrar_usuario .comp-gestion-elemento {
+    margin-top: 40px;
+
+    }
+    #registrar_usuario .comp-gestion-elemento .contenedor-tabla{
+
+    height: initial;
+    }

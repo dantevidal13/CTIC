@@ -1,0 +1,137 @@
+
+
+<div id="registrar_usuario">
+
+	<div class="ttl_content">Registrar Usuario</div>
+      <div class="comp-gestion-elemento" data-titulo="Registrar Usuario" data-elemento="usuario" data-accion="insert" data-gestion="todo" data-espaciototal="4">
+
+        <campo data-nombre="Nombre:" data-iddom="" data-espacio="4" data-campo="nombres" data-tipo="text"></campo>
+
+        <campo data-nombre="Apellido Paterno:" data-iddom="" data-espacio="4" data-campo="apellido_p" data-tipo="text"></campo>
+        <campo data-nombre="Apellido Materno:" data-iddom="" data-espacio="4" data-campo="apellido_m" data-tipo="text"></campo>
+
+        <campo data-nombre="Subir foto" data-campo="foto" data-espacio="4"  data-tipo="imagen" ></campo>
+
+        <campo data-nombre="C&oacute;digo:" data-iddom="" data-espacio="4" data-campo="id" data-tipo="text"></campo>
+        <campo data-nombre="Contrase&ntilde;a:" data-iddom="" data-espacio="4" data-campo="contrasena" data-tipo="text"></campo>
+
+        <campo data-nombre="" data-iddom="" data-espacio="4" data-campo="sexo" data-tipo="select">
+        	<div data-opcion="Elegir sexo:" data-value=""></div>
+        	<div data-opcion="Hombre" data-value="H"></div>
+        	<div data-opcion="Mujer" data-value="M"></div>
+        </campo>
+
+        <campo data-nombre="" data-iddom="" data-espacio="4" data-campo="tipo_documento" data-tipo="select" >
+        	<div data-opcion="Tipo de Doc. de Identidad:" data-value=""></div>
+        	<div data-opcion="DNI" data-value="dni"></div>
+        	<div data-opcion="N de Pasaporte" data-value="pasaporte"></div>
+        </campo>
+
+        <campo data-nombre="N de Doc. de Identidad:" data-iddom="" data-espacio="4" data-campo="n_documento" data-tipo="text"></campo>
+
+        <campo data-nombre="Tel&eacute;fono:" data-iddom="" data-espacio="4" data-campo="telefono" data-tipo="text"></campo>
+        <campo data-nombre="E-mail:" data-iddom="" data-espacio="4" data-campo="email" data-tipo="text"></campo>
+      </div>
+
+</div>
+
+	<div id="lista_usuarios">
+		<div class="titulo_lista">
+			Usuarios creados
+		</div>
+		<div class="cabecera">
+			<div class="fila_usuario">
+
+				<div class="campo">C&oacute;digo</div>
+				<div class="campo">Nombres</div>
+				<div class="campo">Apellidos</div>
+				<div class="campo">Fecha Creaci&oacute;n</div>
+
+			</div>
+		</div>
+		<style>
+
+
+		#lista_usuarios{
+			margin-top: 80px;
+		}
+		#lista_usuarios .titulo_lista{
+			margin-bottom: 30px;
+			font-size: 25px;
+			color:#666;
+		}
+	.cabecera{
+		margin-bottom: 5px;
+	}
+
+	.cabecera .campo{
+	    background: #e1e1e1;
+	}
+
+
+
+	.fila_usuario {
+	 height: 32px;
+	}
+
+
+	.fila_usuario .campo{
+	    padding: 5px;
+	    -webkit-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	    -o-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+	    float: left;
+	    padding: 8px;
+	    text-align: left;
+	    border-right: 1px solid #ccc;
+	}
+
+
+	.fila_usuario .campo:nth-child(1){
+		width: 20%;
+	}
+	.fila_usuario .campo:nth-child(2){
+		width: 25%;
+	}
+	.fila_usuario .campo:nth-child(3){
+		width: 35%;
+	}
+	.fila_usuario .campo:nth-child(4){
+		width: 20%;
+	}
+
+		</style>
+		<div id="lista_elementos">
+			<div class="comp-consultor-elemento" data-elemento="usuario"  data-conteo="10" data-recarga="true" data-dir_imagenes="IMG/USUARIOS/WEB">
+
+				<estructura>
+					<div class="fila_usuario elemento" data-id_elemento="{id}">
+						<div class="campo">{id}</div>
+						<div class="campo">{nombres}</div>
+						<div class="campo">{apellido_p} {apellido_m}</div>
+						<div class="campo">{fecha_creacion}</div>
+					</div>
+				</estructura>
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+<!--
+						<div class="img" style="background-image:url(IMG/PRODUCTOS/WEB/{foto});"></div>
+						<div class="titulo">
+						  <div class="contenedor-tabla">
+						    <div class="contenedor-celda">
+						      <div class="texto">{titulo}</div>
+						    </div>
+						  </div>
+						</div>-->

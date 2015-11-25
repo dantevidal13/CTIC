@@ -1,0 +1,118 @@
+<div class="titulo_info_config">
+	<div class="col-lg-12">
+		<ul class="breadcrumb">
+		  <li><a href="#configuracion"><i class="fa fa-cog"></i>  Configuracion</a></li>
+		  <li class="active">Institucion</li>
+		</ul>
+	</div>
+</div>
+
+<div class="row content_info_config">
+	<div class="col-lg-8 col-md-10 col-md-offset-1table-responsive">
+		<div class="comp-consultor-elemento" data-elemento="institucion"  data-conteo="10">
+				
+				<estructura>
+					<table class="elemento table table-striped table-advance table-hover" data-id_elemento="{id}">
+				  		<thead>
+				        	<tr class="warning"	>
+				             	<th>Informacion de la Institucion</th>
+				             	<th>Valor</th>
+				            </tr>
+				        </thead>
+				        <tbody>
+				            <tr>
+				              	<td>Nombre:</td>
+				                <td>{nombre}</td>
+				            </tr>
+					    	<tr>
+				              	<td>Direccion:</td>
+				                <td>{direccion}</td>
+				        	</tr>
+				        	<tr>
+				                <td>Teléfono</td>
+				                <td>{telefono}</td>
+				            </tr>
+				            <tr>
+				                <td>Web</td>
+				                <td>{web}</td>  </tr>
+				            <tr>
+				                <td>Mail</td>
+				                <td>{mail}</td>
+				            </tr>
+				            <tr>
+				                <td>Logo</td>
+				                <td><img src="IMG/INSTITUCION/WEB/{logo}" style="height:50px;"></td>
+				            </tr>
+				            <tr>
+				                <td>Notas</td>
+				                <td>{notas}</td>
+				            </tr>
+				       </tbody>
+					</table>
+				</estructura>
+			</div>
+	</div>
+</div>
+
+
+<div class="row form_edit_institucion oculto">
+	<div class="comp-gestion-elemento" data-titulo="" data-elemento="institucion" data-accion="update" data-gestion="update" data-espaciototal="4">
+
+		<campo data-nombre="Nombre:" data-espacio="4" data-campo="nombre" data-tipo="text"></campo>
+		<campo data-nombre="Direcci&oacute;n:" data-espacio="4" data-campo="direccion" data-tipo="text"></campo>
+		<campo data-nombre="Tel&eacute;fono:" data-espacio="4" data-campo="telefono" data-tipo="text"></campo>
+		<campo data-nombre="Web:" data-espacio="4" data-campo="web" data-tipo="text"></campo>
+		<campo data-nombre="E-mail:" data-espacio="4" data-campo="mail" data-tipo="text"></campo>
+		<campo data-nombre="Subir logotipo" data-src="IMG/INSTITUCION/WEB" data-campo="logo" data-espacio="4"  data-tipo="imagen" ></campo>
+		<campo data-nombre="Notas:" data-espacio="4" data-campo="notas" data-tipo="text"></campo>
+
+	</div>
+
+</div>
+
+
+<div class="row btns_edit_institucion">
+	<div class="col-lg-6 col-lg-offset-2" style="text-align: right;">
+        <td><button id="btn_editar_institucion" type="button" class="btn btn-primary">Editar</button></td>
+	</div>
+</div>
+
+<style>
+	.form_edit_institucion{
+		width: 600px;
+    margin: auto;
+	}
+
+.comp-gestion-elemento .comp-ge-campo_input{
+	text-align: left;
+}
+</style>
+<script>
+	$(document).ready(function(){
+		
+		$('body').on('click','#btn_editar_institucion',function(){
+
+			$('.content_info_config').addClass('oculto');
+			$('.btns_edit_institucion').addClass('oculto');			
+			$('.form_edit_institucion').removeClass('oculto');
+
+			$('.content_info_config .elemento').click();
+
+		});
+	});
+
+	function fun_ejecuta_comp_ge_cancelar(elemento){
+		if(elemento=='institucion'){			
+			$('.content_info_config').removeClass('oculto');
+			$('.btns_edit_institucion').removeClass('oculto');
+			$('.form_edit_institucion').addClass('oculto');
+		}
+	}
+	function fun_ejecuta_comp_ge_update(elemento){
+		if(elemento=='institucion'){			
+			$('.content_info_config').removeClass('oculto');
+			$('.btns_edit_institucion').removeClass('oculto');
+			$('.form_edit_institucion').addClass('oculto');
+		}
+	}
+</script>

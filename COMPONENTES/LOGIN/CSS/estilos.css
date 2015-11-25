@@ -1,0 +1,296 @@
+
+
+.comp-login .seleccionar_forma{      
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+
+  .comp-login .btn_volver{
+      position: absolute;
+    top: 10px;
+    padding: 3px 20px 3px 3px;
+    cursor: pointer;
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+  }    
+  .comp-login .btn_volver:hover{
+      text-decoration: underline;
+      color: white;
+      -webkit-transform: translate3d(-10px,0px,0px);
+      -moz-transform: translate3d(-10px,0px,0px);
+      -ms-transform: translate3d(-10px,0px,0px);
+      -o-transform: translate3d(-10px,0px,0px);
+      transform: translate3d(-10px,0px,0px);
+  }
+
+  .comp-login .seleccionar_forma .titulo{          
+    padding: 0px 0px 20px 0px;
+    font-size: 20px;
+  }
+    .comp-login .seleccionar_forma .opcion{      
+      
+      display: inline-table;
+      cursor: pointer;
+    }
+
+
+    .comp-login .seleccionar_forma .opcion .bloque{ 
+      background: rgba(17, 19, 94, 0.41);
+      border: 1px solid rgba(121, 124, 255, 0.54);
+      padding: 5px;
+      overflow: hidden;
+    }
+    .comp-login .seleccionar_forma .opcion:hover .bloque{  
+      background: rgba(17, 19, 94, 0.8);
+    }
+
+      .comp-login .seleccionar_forma .opcion img{      
+        -webkit-transform: scale(.9);
+        -moz-transform: scale(.9);
+        -ms-transform: scale(.9);
+        -o-transform: scale(.9);
+        transform: scale(.9);
+      }
+      .comp-login .seleccionar_forma .opcion:hover img{      
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2);
+      }
+      
+      .comp-login .seleccionar_forma .opcion .texto{
+        font-size: 12px;
+        text-align: center;
+        padding-top: 2px;
+      }
+
+
+
+
+.comp-login .div_form{
+  display: table-cell;
+  vertical-align: middle;      
+}
+
+.comp-login .div_form .comp-login-content-titulo{
+    overflow: hidden;
+  height: 50px;
+  width: 235px;
+  margin: auto;
+}
+
+.comp-login .div_form .comp-login-content-campos{
+    max-width: 238px;
+  margin: auto;
+}
+
+
+  .comp-login .div_form .comp-login-titulos{
+    width: 300%;
+    margin-left: 0%;    
+    -webkit-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+    -moz-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+    -ms-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+    -o-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+    transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+  }
+  .comp-login .div_form .comp-login-titulos.titulo_olvide_pass{
+    margin-left: -100%;
+  }
+  .comp-login .div_form .comp-login-titulos.titulo_registrar{
+    margin-left: -200%;
+  }
+
+
+  .comp-login #div_form_iniciar_sesion .titulo{
+    padding: 10px 0px;
+    font-size: 20px;
+    display: inline-block;
+    width: 33.3%;
+  }
+ 
+
+        .comp-login .comp-login-campo{                
+          padding: 3px;
+
+        }
+        .comp-login .comp-login-campo_input{  
+          background-color: white;
+          border-radius: 6px;
+          margin-bottom: 5px;
+          border: 1px solid rgba(0, 216, 255, 0.52);
+
+          -webkit-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+          -moz-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+          -ms-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+          -o-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+          transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+          overflow: hidden;
+        }
+
+        .comp-login .comp-login-campo_input.oculto{ 
+          padding-top: 0px !important;
+          padding-bottom: 0px !important;
+          height: 0px !important;
+          border: 0px !important;
+        }
+
+          .comp-login .comp-login-campo_input.focus-input{
+            box-shadow: 0px 0px 6px rgba(0, 216, 200, .7);
+          }
+
+
+        .comp-login .comp-login-campo.comp-login-alerta{
+          border: 1px rgba(255, 142, 142, 0.8) solid;
+        }
+          .comp-login .comp-login-campo_input.comp-login-alerta.focus-input{
+            box-shadow: 0px 0px 6px rgba(255, 80, 80, .8);
+          }
+
+
+          .comp-login .comp-login-campo input{                
+                     
+            padding: 5px;
+            border: 0px solid rgba(0, 216, 255, 0.52);
+            outline: none;
+            font-size: 17px;
+            width: 100%;
+            -webkit-box-sizing:border-box ;
+            -ms-box-sizing:border-box ;
+            -o-box-sizing:border-box ;
+            -moz-box-sizing:border-box ;
+            box-sizing:border-box ;
+          }
+          
+          .comp-login .comp-login-campo textarea{                
+              padding: 5px;
+              border: 0px solid rgba(0, 216, 255, 0.52);
+              outline: none;
+              width: 100%;
+              height: 150px;
+              font-size: 17px;
+              resize: none;
+              -webkit-box-sizing:border-box ;
+              -ms-box-sizing:border-box ;
+              -o-box-sizing:border-box ;
+              -moz-box-sizing:border-box ;
+              box-sizing:border-box ;
+          }
+          .comp-login .comp-login-campo .campo-vacio, 
+          .comp-login .comp-login-campo .campo-error, 
+          .comp-login .comp-login-campo .campo-aux{                
+            display: block;
+            color: red;
+            overflow: hidden;
+            border-top: 1px solid rgb(255, 205, 205);
+            height: 20px;
+            font-size: 14px;
+            text-align: center;          
+
+            -webkit-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+            -moz-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+            -ms-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+            -o-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+            transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+
+          }
+          .comp-login .comp-login-campo .campo-vacio.oculto, 
+          .comp-login .comp-login-campo .campo-error.oculto, 
+          .comp-login .comp-login-campo .campo-aux.oculto{                
+            height: 0px;
+            border-top: 0px solid rgb(255, 205, 205);
+          }
+          
+
+    .comp-login .div_form #comp-login-btn-accion{
+      width: 100%;
+      cursor: pointer;
+      background: rgba(17, 19, 94, 0.51);
+      border: 1px solid rgba(121, 124, 255, 0.54);
+      color: white;
+      font-size: 18px;
+      overflow: hidden;
+      width: 235px;
+    }
+
+
+
+    .comp-login .div_form .content-botones{
+      width: 300%;
+      margin-left: 0%;    
+      -webkit-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+      -moz-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+      -ms-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+      -o-transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+      transition: all .3s cubic-bezier(0, 0, 0.25, 1);
+    }
+    .comp-login .div_form .content-botones.btn_olvide_pass{
+      margin-left: -100%;
+    }
+    .comp-login .div_form .content-botones.btn_registrar{
+      margin-left: -200%;
+    }
+
+
+    .comp-login #div_form_iniciar_sesion .boton{
+        font-size: 18px;
+      text-align: center;
+      display: inline-block;
+      width: 33.3%;
+      padding: 10px;
+
+      -webkit-box-sizing:border-box ;
+      -ms-box-sizing:border-box ;
+      -o-box-sizing:border-box ;
+      -moz-box-sizing:border-box ;
+      box-sizing:border-box ;
+    }
+
+
+
+    .comp-login .div_form #comp-login-btn-accion:hover{        
+      background: rgba(68, 71, 168, 0.51);
+    }
+
+
+
+
+
+  .comp-login .div_form #comp-login-olvide_pass,
+  .comp-login .div_form #comp-login-crear_nueva_cuenta{
+    padding: 5px 0px;
+    border-top: 1px solid rgba(121, 89, 244, 0.43);
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .comp-login .div_form #comp-login-olvide_pass:hover,
+  .comp-login .div_form #comp-login-crear_nueva_cuenta:hover{    
+    background-color: rgba(255, 255, 255, 0.18);
+  }  
+  .comp-login .div_form #comp-login-olvide_pass.select,
+  .comp-login .div_form #comp-login-crear_nueva_cuenta.select{    
+    background-color: rgba(255, 255, 255, 0.18);
+  }  
+
+  .comp-login .div_form #comp-login-olvide_pass{    
+    margin-top: 12px;    
+  }
+
+
+
+
+  .comp-login #div_form_iniciar_sesion{
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+  }
+  .comp-login #div_form_registro{
+    position: absolute;
+    top: 0px;
+    height: 100%;
+  }

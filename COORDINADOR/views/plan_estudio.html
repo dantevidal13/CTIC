@@ -1,0 +1,199 @@
+
+
+<div id="vista_gestion_plan_estudio" class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 table-responsive">
+
+
+        <div data-accion="consulta" class="titulo_area">Lista de Planes de Estudio</div>
+        <button id="btn_agregar_plan_estudio" type="button" class="btn btn-primary">Agregar Plan de Esutios +</button>
+
+
+    <div class="form_registro_plan_estudio oculto">
+        <div class="volver">
+            << Volver
+        </div>
+
+        <div data-accion="insert" class="titulo_area oculto">Crear Plan de Estudios</div>
+        <div data-accion="update" class="titulo_area oculto">Modificar o eliminar Plan de Estudios</div>
+        <div class="comp-gestion-elemento" data-titulo="" data-elemento="plan_estudio" data-accion="insert" data-gestion="todo" data-espaciototal="4">
+
+            <campo data-nombre="C&oacute;digo:" data-update="false" data-espacio="4" data-campo="codigo_plan" data-tipo="text"></campo>
+
+            <campo data-nombre="Nombre del Plan de Estudio:" data-espacio="4" data-campo="nombre_plan_estudio" data-tipo="text"></campo>
+
+            <campo data-nombre="Codigo programa:" data-espacio="4" data-campo="id_programa" data-tipo="text"></campo>
+
+            <campo data-nombre="Fecha de aprobaci&oacute;n:" data-espacio="4" data-campo="fecha_aprobacion" data-tipo="date"></campo>
+
+            <campo data-nombre="Nro. de Resolucion:" data-espacio="4" data-campo="nro_resolucion" data-tipo="text"></campo>
+
+            <campo data-nombre="Subir resolucion pdf" data-campo="id_pdf_resolucion" data-espacio="4"  data-tipo="archivo" data-extension="pdf"></campo>
+
+            <campo data-nombre="Estado del plan" data-campo="estado" data-espacio="4" data-tipo="select" data-select="0">
+              <div data-value="0" data-opcion="Inactivo"></div>
+              <div data-value="1" data-opcion="Activo"></div>
+            </campo>
+
+            <campo  data-campo="metodologia" data-espacio="4" data-tipo="select">
+              <div data-opcion="Seleccione metodolog&iacute;a" data-value=""></div>
+              <div data-value="1" data-opcion="Presencial"></div>
+              <div data-value="2" data-opcion="Semi Presencial"></div>
+              <div data-value="3" data-opcion="A distancia"></div>
+              
+              <IdExtra DOMdestino="comp-ge-campo" id="select_tipo_metodologia"></IdExtra>
+            </campo>
+
+            <campo data-nombre="N&uacute;mero de ciclos:" data-espacio="4" data-campo="nro_ciclos" data-tipo="text"></campo>
+            <campo data-nombre="N&uacute;mero de creditos obligatorios:" data-espacio="4" data-campo="nro_creditos_obligatorios" data-tipo="text"></campo>
+            <campo data-nombre="N&uacute;mero de creditos electivos:" data-espacio="4" data-campo="nro_creditos_electivos" data-tipo="text"></campo>
+            
+        </div>
+    </div>
+
+    <div class="div_consulta_plan_estudios">
+
+        <div class="fila_cabecera">
+            <div class="fila">
+                <div class="col col-1">Codigo</div>
+                <div class="col col-2">Nombre</div>
+                <div class="col col-3">Metodolog&iacute;a</div>
+                <div class="col col-4">Fecha de Aprobaci&oacute;n</div>
+                <div class="col col-5">N° de ciclos</div>
+                <div class="col col-6">N° de cr&eacute;ditos obligatorios</div>
+            </div>
+        </div>
+
+
+        <div class="lista_plan_estudios">
+
+            <div class="comp-consultor-elemento" data-elemento="plan_estudio"  data-conteo="10">
+                
+                <estructura>
+                        <div class="fila elemento" data-id_elemento="{codigo_plan}">
+                            <div class="col col-1">{codigo_plan}</div>
+                            <div class="col col-2">{nombre_plan_estudio}</div>
+                            <div class="col col-3">{metodologia}</div>
+                            <div class="col col-4">{fecha_aprobacion}</div>
+                            <div class="col col-5">{nro_ciclos}</div>
+                            <div class="col col-6">{nro_creditos_obligatorios}</div>
+                        </div>
+                </estructura>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        
+        $(document).ready(function(){
+            $('body').on('click','.div_consulta_plan_estudios .elemento',function(){
+                $('.form_registro_plan_estudio').removeClass('oculto');
+                $('#btn_agregar_plan_estudio').addClass('oculto');
+                $('.div_consulta_plan_estudios').addClass('oculto');
+
+                $('#vista_gestion_plan_estudio .titulo_area').addClass('oculto');
+                $('#vista_gestion_plan_estudio .titulo_area[data-accion="update"]').removeClass('oculto');
+            });
+
+            $('body').on('click','#btn_agregar_plan_estudio',function(){
+                $('.form_registro_plan_estudio').removeClass('oculto');
+                $('#btn_agregar_plan_estudio').addClass('oculto');
+                $('.div_consulta_plan_estudios').addClass('oculto');
+
+
+
+                $('#vista_gestion_plan_estudio .titulo_area').addClass('oculto');
+                $('#vista_gestion_plan_estudio .titulo_area[data-accion="insert"]').removeClass('oculto');
+            });
+
+            $('body').on('click','.form_registro_plan_estudio .volver',function(){
+                $('.form_registro_plan_estudio .comp-ge-btn-accion[data-accion="cancelar"]').click();
+            });
+
+        });
+
+        function fun_ejecuta_comp_ge_cancelar(){
+
+            $('.form_registro_plan_estudio').addClass('oculto');
+            $('#btn_agregar_plan_estudio').removeClass('oculto');
+            $('.div_consulta_plan_estudios').removeClass('oculto');
+
+            $('#vista_gestion_plan_estudio .titulo_area').addClass('oculto');
+            $('#vista_gestion_plan_estudio .titulo_area[data-accion="consulta"]').removeClass('oculto');
+
+        }
+    </script>
+
+
+
+    <style>
+
+    .volver{
+        cursor: pointer;
+        width: 150px;
+        margin: auto;
+        padding: 10px;
+        font-size: 18px;
+    }
+    .volver:hover{
+        background: #EEE;
+    }
+    .titulo_area{
+
+        font-size: 30px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    .fila_cabecera,.lista_plan_estudios{
+        display: table;
+    }
+    .fila_cabecera{
+        background: #340502;
+        color: white;
+        margin-top: 30px;
+    }
+    .lista_plan_estudios{
+        background: white;
+    }
+    .fila{
+        display: table-row;
+    }
+        .col{
+            display: table-cell;
+            height: 40px;
+            vertical-align: middle;
+            border: 1px solid #ddd;
+        }
+
+        .col-1{
+            max-width: 130px;
+            min-width: 130px;
+        }
+        .col-2{
+            max-width: 220px;
+            min-width: 220px;
+        }
+        .col-3{
+            max-width: 90px;
+            min-width: 90px;
+        }
+        .col-4{
+            max-width: 90px;
+            min-width: 90px;
+        }
+        .col-5{
+            max-width: 80px;
+            min-width: 80px;
+        }
+        .col-6{
+            max-width: 80px;
+            min-width: 80px;
+        }
+    </style>
+
+
+
+
+</div>        
+</div>

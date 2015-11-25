@@ -1,0 +1,39 @@
+
+
+<div class="row">
+    <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 table-responsive">
+
+
+        <h2>Lista de Programas Academicos</h2></br></br>
+
+<a href='#new_pa'><button type="button" class="btn btn-primary">Agregar Programa Academico +</button></a></br></br></br>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Tipo</th>
+                    <th>Nombre</th>
+                    <th>Facultad</th>
+                    <th>Creacion</th>
+                    <th>N° de Resolucion</th>
+                    <th>Estado Actual</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="n in names">
+                    <td data-ng-show="n.codigo">{{n.codigo}}</td>
+                    <td data-ng-show="n.codigo">{{n.tipo}}</td>
+                    <td data-ng-show="n.nombre">{{n.nombre}}</td>
+                    <td data-ng-show="n.fecha">{{n.facultad}}</td>
+                    <td data-ng-show="n.fecha">{{n.fecha}}</td>
+                    <td data-ng-show="n.resolucion">{{n.resolucion}}</td>
+                    <td data-ng-show="n.estado">{{n.estado}}</td>       
+                    <td ><a href="#" ng-click="delNom(n.nom)">[editar]   </a><a href="#programa" ng-click="delNom(n.codigo, $index)">  [eliminar]</a></td>   
+                </tr>
+            </tbody>
+        </table>
+ 
+    </div>        
+    </div>

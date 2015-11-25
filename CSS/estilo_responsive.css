@@ -1,0 +1,277 @@
+
+@media (max-width: 1000px) {
+
+	#marcas #comp-informacion-0, #marcas #comp-informacion-1{
+		width: 85%;
+	}	
+
+	
+	#marcas #comp-informacion-2{
+
+    left: 15%;
+    width: 35%;
+	}
+	#marcas .comp-nosotros{
+
+    width: 50%;
+	}
+
+	.seccion_clientes .estadisticas{
+
+    width: 320px;
+    height: 400px;
+	}
+	#clientes .comp-informacion .titulo{
+
+	    margin-left: 25px;
+	}
+	#clientes #comp-informacion-3 .descripcion {
+	    margin-left: 35px;
+	}
+
+
+.visor_pantalla_completa .mostrador_servicio.desplegado{
+
+    width: 94vw;
+    height: 94vh;
+}
+
+}
+
+#marcas.altura_responsive #comp-informacion-0{
+	height: 100%;
+}
+#marcas.altura_responsive #comp-informacion-1{
+	height: 100%;
+}
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+
+#inicio .comp-slider-full.texto_dividido .comp-slider-textos-content .slide_texto .content_texto .texto{
+
+    font-size: 55px;
+}
+
+
+
+	#marcas #comp-informacion-0, #marcas #comp-informacion-1{
+		width: 100%;
+
+	}	
+
+
+	#marcas #comp-slider-full-1{
+		width: 100%;
+	}	
+
+
+	#marcas #comp-informacion-2{
+
+    left: 0%;
+    width: 35%;
+	}
+	#marcas .comp-nosotros{
+
+    width: 65%;
+	}
+
+.visor_pantalla_completa .mostrador_servicio.desplegado{
+
+    width: 100%;
+    height: 100%;
+}
+}
+
+
+@media (max-width: 700px) {
+	#clientes #comp-informacion-3{
+
+    position: initial !important;
+    width: 100%;
+	}
+	#clientes .content_clientes{
+
+    width: 100%;
+	}
+
+	#contactenos .comp-contactenos-content{
+
+    width: 100%;
+	}
+
+
+  #productos .marcas{
+
+    height: initial;
+    padding-top: 120px;
+    padding-bottom: 20px;
+  }
+  #productos .marcas .img_content{
+
+    margin-bottom: 30px;
+  }
+
+  #servicios .stock .servicio{
+  	
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+#contactenos .banner_enviar_cv .texto, #contactenos .banner_enviar_cv .texto2{
+    font-size: 17px;
+}
+
+
+}
+
+@media (max-width: 650px) {
+
+    .visor_pantalla_completa{
+        overflow-x:hidden;
+    }
+    .visor_pantalla_completa .mostrador_servicio{
+    }
+
+
+    .visor_pantalla_completa .mostrador_servicio.desplegado{
+        height: 200%;
+
+        position: initial;
+        -webkit-transform: translate3D(0px,0px,0px);
+        -moz-transform: translate3D(0px,0px,0px);
+        -ms-transform: translate3D(0px,0px,0px);
+        -o-transform: translate3D(0px,0px,0px);
+        transform: translate3D(0px,0px,0px);
+    }
+    .visor_pantalla_completa .mostrador_servicio.desplegado .info_servicio{
+
+        width: 100%;
+        height: 50%;
+    }
+    .visor_pantalla_completa .fotos_servicio{
+
+        width: 100%;
+        height: 50%;
+    }
+
+    .visor_pantalla_completa .info_servicio .titulo{
+        height: 40px;
+    }
+    .visor_pantalla_completa .mostrador_servicio .trabajos_realizados{
+        display: block;
+    }
+
+    .visor_pantalla_completa .mostrador_servicio.desplegado .content_info_extra{
+        height: calc(70% - 115px);
+    }
+
+
+#contactenos .banner_enviar_cv .texto, #contactenos .banner_enviar_cv .texto2{
+    font-size: 14px;
+}
+
+}
+
+
+
+
+@media (max-width: 600px) {
+#marcas #comp-informacion-1{
+
+    padding-left: 0px;
+    padding-right: 0;
+}
+
+#marcas #comp-informacion-2{
+
+    height: initial;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    width: 100%;
+    position: initial !important;
+}
+#marcas .comp-nosotros{
+	
+    width: 100%;
+}
+
+#contactenos .banner_enviar_cv .texto, #contactenos .banner_enviar_cv .texto2{
+    font-size: 11px;
+}
+
+}
+
+@media (max-width: 500px) {
+  #menu .comp-menu-fijo .logo {
+    width: 90px;
+    }
+
+#contactenos .banner_enviar_cv .texto, #contactenos .banner_enviar_cv .texto2{
+    display:none;
+}
+
+  }
+
+@media (max-width: 400px) {
+
+#inicio .comp-slider-full.texto_dividido .comp-slider-textos-content .slide_texto .content_texto .texto{
+  
+    font-size: 40px;
+}
+
+	#marcas #comp-informacion-0{
+    padding: 80px 20px 60px 20px;
+
+	}
+
+
+	#marcas .comp-informacion .titulo{
+
+    font-size: 29px;
+	}
+
+
+
+#marcas #comp-informacion-1{
+
+    padding-left: 0px;
+    padding-right: 0;
+}
+#marcas #comp-informacion-1 .imagenes .img{
+    width: calc(32% - 1px);
+    height: 30vh;
+}
+
+#marcas #info{
+
+    padding: 80px 20px 40px 20px;
+}
+
+#marcas #comp-nosotros-0 .div-info-hitos .seccion-hito{
+
+    min-width: 240px;
+}
+
+.seccion_clientes .estadisticas .titulo_grafico{
+
+    font-size: 19px;
+}
+	.seccion_clientes .estadisticas{
+
+    width: 88%;
+    height: 300px;
+	}
+
+
+
+}
+
+
+
+

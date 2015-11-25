@@ -1,0 +1,209 @@
+
+
+<div id="vista_gestion_programa" class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 table-responsive">
+
+
+        <div data-accion="consulta" class="titulo_area">Lista de Programas Academicos</div>
+        <button id="btn_agregar_programa" type="button" class="btn btn-primary">Agregar Programa Academico +</button>
+
+
+
+    <div class="form_registro_programa oculto">
+        <div class="volver">
+            << Volver
+        </div>
+        <div data-accion="insert" class="titulo_area oculto">Crear programa</div>
+        <div data-accion="update" class="titulo_area oculto">Modificar o eliminar programa</div>
+        <div class="comp-gestion-elemento" data-titulo="" data-elemento="programa" data-accion="insert" data-gestion="todo" data-espaciototal="4">
+
+            <campo data-nombre="C&oacute;digo:" data-update="false" data-espacio="4" data-campo="codigo" data-tipo="text"></campo>
+
+
+            <campo  data-campo="id_tipo_programa" data-espacio="4" data-tipo="select">
+              <div data-opcion="Seleccione tipo de programa" data-value=""></div>
+              <div data-value="1" data-opcion="Maestr&iacute;a"></div>
+              <div data-value="2" data-opcion="Doctorado"></div>
+              <div data-value="3" data-opcion="Diplomado"></div>
+              
+              <IdExtra DOMdestino="comp-ge-campo" id="select_tipo_programa"></IdExtra>
+            </campo>
+
+            <campo data-nombre="Nombre del programa:" data-espacio="4" data-campo="nombre_programa" data-tipo="text"></campo>
+
+            <campo data-nombre="Fecha de aprobaci&oacute;n:" data-espacio="4" data-campo="fecha_aprobacion" data-tipo="date"></campo>
+
+            <campo data-nombre="Nro. de Resolucion:" data-espacio="4" data-campo="nro_resolucion" data-tipo="text"></campo>
+
+            <campo data-nombre="Subir resolucion pdf" data-campo="id_pdf_resolucion" data-espacio="4"  data-tipo="archivo" data-extension="pdf"></campo>
+
+            <campo data-nombre="Estado del programa" data-campo="estado_programa" data-espacio="4" data-tipo="select" data-select="0">
+              <div data-value="0" data-opcion="Inactivo"></div>
+              <div data-value="1" data-opcion="Activo"></div>
+
+            </campo>
+            
+        </div>
+    </div>
+
+    <div class="div_consulta_programas">
+
+        <div class="fila_cabecera">
+            <div class="fila">
+                <div class="col col-1">Codigo</div>
+                <div class="col col-2">Nombre</div>
+                <div class="col col-3">Tipo de programa</div>
+                <div class="col col-4">Fecha de Aprobaci&oacute;n</div>
+                <div class="col col-5">N° de Resolucion</div>
+                <div class="col col-6">Acciones</div>
+            </div>
+        </div>
+
+
+        <div class="lista_programas">
+
+            <div class="comp-consultor-elemento" data-elemento="programa"  data-conteo="10">
+                
+                <estructura>
+                        <div class="fila elemento" data-id_elemento="{codigo}">
+                            <div class="col col-1">{codigo}</div>
+                            <div class="col col-2">{nombre_programa}</div>
+                            <div class="col col-3">{id_tipo_programa}</div>
+                            <div class="col col-4">{fecha_aprobacion}</div>
+                            <div class="col col-5">{nro_resolucion}</div>
+                            <div class="col col-6">{estado_programa}</div>
+                        </div>
+                </estructura>
+
+            </div>
+
+        </div>
+    </div>
+
+<script>
+    
+    $(document).ready(function(){
+        $('body').on('click','.div_consulta_programas .elemento',function(){
+            $('.form_registro_programa').removeClass('oculto');
+            $('#btn_agregar_programa').addClass('oculto');
+            $('.div_consulta_programas').addClass('oculto');
+
+            $('#vista_gestion_programa .titulo_area').addClass('oculto');
+            $('#vista_gestion_programa .titulo_area[data-accion="update"]').removeClass('oculto');
+        });
+
+        $('body').on('click','#btn_agregar_programa',function(){
+            $('.form_registro_programa').removeClass('oculto');
+            $('#btn_agregar_programa').addClass('oculto');
+            $('.div_consulta_programas').addClass('oculto');
+
+            $('#vista_gestion_programa .titulo_area').addClass('oculto');
+            $('#vista_gestion_programa .titulo_area[data-accion="insert"]').removeClass('oculto');
+        });
+
+        $('body').on('click','.form_registro_programa .volver',function(){
+
+            $('.form_registro_programa .comp-ge-btn-accion[data-accion="cancelar"]').click();
+
+        });
+
+
+    });
+
+    function fun_ejecuta_comp_ge_cancelar(){
+
+        $('.form_registro_programa').addClass('oculto');
+        $('#btn_agregar_programa').removeClass('oculto');
+        $('.div_consulta_programas').removeClass('oculto');
+
+        $('#vista_gestion_programa .titulo_area').addClass('oculto');
+        $('#vista_gestion_programa .titulo_area[data-accion="consulta"]').removeClass('oculto');
+    }
+</script>
+
+
+
+<style>
+.titulo_area{
+
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.fila_cabecera,.lista_programas{
+    display: table;
+}
+.fila_cabecera{
+    background: #340502;
+    color: white;
+    margin-top: 30px;
+}
+.lista_programas{
+    background: white;
+}
+.fila{
+    display: table-row;
+}
+    .col{
+        display: table-cell;
+    height: 40px;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    }
+
+    .col-1{
+        max-width: 130px;
+        min-width: 130px;
+    }
+    .col-2{
+        max-width: 220px;
+        min-width: 220px;
+    }
+    .col-3{
+        max-width: 90px;
+        min-width: 90px;
+    }
+    .col-4{
+        max-width: 90px;
+        min-width: 90px;
+    }
+    .col-5{
+        max-width: 80px;
+        min-width: 80px;
+    }
+    .col-6{
+        max-width: 80px;
+        min-width: 80px;
+    }
+</style>
+
+
+<!--
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Facultad</th>
+                    <th>Fecha de Creacion</th>
+                    <th>N° de Resolucion</th>
+                    <th>Estado Actual</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="n in names">
+                    <td data-ng-show="n.codigo">{{n.codigo}}</td>
+                    <td data-ng-show="n.nombre">{{n.nombre}}</td>
+                    <td data-ng-show="n.fecha">{{n.facultad}}</td>
+                    <td data-ng-show="n.fecha">{{n.fecha}}</td>
+                    <td data-ng-show="n.resolucion">{{n.resolucion}}</td>
+                    <td data-ng-show="n.estado">{{n.estado}}</td>       
+                    <td ><a href="COORDINADOR/#" ng-click="delNom(n.nom)">[editar]   </a><a href="COORDINADOR/#programa" ng-click="delNom(n.codigo, $index)">  [eliminar]</a></td>   
+                </tr>
+            </tbody>
+        </table>
+-->
+ 
+    </div>        
+    </div>
